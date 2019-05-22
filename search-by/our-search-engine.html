@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+  <head> 
+    <title>Our Search Engine | SARA</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/layout.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link rel="SHORTCUT ICON" href="../SARA-icon.png">
+  </head>
+  <nav class="topnav" id="topNav">
+    <a class="logo" href="../home.html"><img src="../SARA-icon.png" alt="SARA" style="width:50px; height: 50px"></a>
+    <div class="dropdown">
+      <button class="dropbtn">Search
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="fixed-list.html">Fixed List</a>
+        <a href="from-file.html">From File</a>
+        <a href="google-api.html">Google API</a>
+        <a href="our-search-engine.html" class="active">Our Search Engine</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Course
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019" target="_blank">Zybook</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Browser
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../browser/navigator.html">Navigator</a>
+        <a href="../browser/window.html">Window</a>
+        <a href="../browser/screen.html">Screen</a>
+        <a href="../browser/location.html">Location</a>
+        <a href="../browser/geolocation.html">Geolocation</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../about/developer.html">Developer</a>
+        <a href="../about/contact-us.php">Contact Us</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Admin
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../admin/indexing-launcher.php">Indexing Launcher</a>
+        <a href="../admin/search-hist.php">Search History & Stats</a>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="hamburger" onclick="navBarFunc()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <body> 
+    <div class="searchpage">
+      <div class="searchpagetitle">
+        <h1>Our Search Engine</h1>
+        <p></p>
+      </div>
+      <div class="searchbar">
+        <form action="search-results.php" method="get" class="searchform" id="searchform">  
+          <input type="hidden" name="searchby" value="ourengine">   
+          <input type="search" id="q" name="q" autocomplete="off" placeholder="Search">
+          <button type="submit" id="searchbtn">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        <div class="advanced">
+          <label>
+            <input type="checkbox" id="caseinsensitive" name="ci" value="true" autocomplete="off" form="searchform">
+            Case Insensitive
+          </label>
+          <label>
+            <input type="checkbox" id="partialsearch" name="ps" value="true" autocomplete="off" form="searchform">
+            Partial Search
+          </label>
+        </div>
+      </div>
+      <div class="searchrelocate">
+        <h2>Looking for a different way to search?</h2>
+      <form action="fixed-list.html" class="boxbtnform">
+        <button type="submit" class="boxbtn">
+          <span class="btnname">Fixed List</span>
+          <p>Hard coded search results</p>
+        </button>
+      </form>
+      <form action="from-file.html" class="boxbtnform">
+        <button type="submit" class="boxbtn">
+          <span class="btnname">From File</span>
+          <p>Search results from files</p>
+        </button>
+      </form>
+      <form action="google-api.html" class="boxbtnform">
+        <button type="submit" class="boxbtn">
+          <span class="btnname">Google API</span>
+          <p>Search results from the Google API</p>
+        </button>
+      </form>
+    <!--
+      <form action="our-search-engine.html" class="boxbtnform">
+        <button type="submit" class="boxbtn">
+          <span class="btnname">Our Engine</span>
+          <p>Search results from our search engine</p>
+        </button>
+      </form>
+    -->
+    </div>
+    <script src="../scripts/functions.js"></script>
+  </body> 
+</html>
+

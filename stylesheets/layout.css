@@ -1,0 +1,858 @@
+/*************/
+/** Default **/
+/*************/
+:root {
+  --color-blue: #28303d;
+  --color-urlblue: #2771ea;
+  --color-offwhite: #edeeef;
+  --color-gray: #72767c;
+  --color-lightgray: #e5e7e8;
+  --color-darkgray: #4b4d4f;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: auto;
+}
+
+body{
+  background-color: white;
+  color: var(--color-blue);
+}
+
+h1 {
+  font-size: 45px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+table {
+  width: 70%;
+  margin-bottom: 50px;
+  border: 2px solid darkgray;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  padding: 5px;
+}
+
+.tableheader {
+    border: 2px solid darkgray;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--color-offwhite);
+}
+table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.advanced {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.advanced label {
+    padding-left: 15px;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: var(--color-lightgray);
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: var(--color-darkgray);
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: var(--color-darkgray);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/******************/
+/** topnav items **/
+/******************/
+.topnav {
+  background-color: var(--color-offwhite);
+  overflow: hidden;
+  color: var(--color-blue);
+}
+
+/** logo and hamburger**/
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+/** just the SARA logo **/
+.topnav .logo {
+  padding: 0;
+  background-color: var(--color-offwhite) !important;
+  height: 50px;
+}
+
+/** just the hamburger menu **/
+.topnav .hamburger {
+  display: none;
+}
+
+/** change color of topnav and dropdown item being hovered over **/
+.topnav a:hover, 
+.dropdown:hover .dropbtn {
+  background-color: #72767c;
+  color: #edeeef;
+}
+
+/*******************/
+/** dropdown menu **/
+/*******************/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/** Search, Browser, etc **/
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: var( --color-blue);
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+/** boxes under Search, Browser, etc **/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-lightgray);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/** Fixed List, From File, etc **/
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+}
+
+/** show dropdown on hover **/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/** change color of active item in dropdown **/
+.dropdown .active {
+  background-color: var(--color-darkgray);
+  font-weight: bold;
+  color: var(--color-offwhite) !important;
+}
+
+/******************/
+/** for homepage **/
+/******************/
+.homepage, 
+.homepage-child {
+  text-align: center;
+}
+
+.homepage h1 {
+  padding: 60px 0 20px 0;
+}
+
+/** homepage boxes **/
+.homepage .boxbtn {
+  font-size: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-offwhite);
+  margin: 40px 20px;
+  width: 250px;
+  height: 250px;
+}
+
+/** text inside boxes **/
+.homepage .boxbtn .btnname {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/*************************/
+/** children of homepage**/
+/*************************/
+.homepage-child h1 {
+  padding: 60px 0 50px 0;
+}
+
+.homepage-child .boxbtn {
+  font-size: 15px;
+  background-color: var(--color-blue);
+  color: var(--color-offwhite);
+  margin: 10px 10px;
+  width: 150px;
+  height: 150px;
+}
+
+/** box text **/
+.homepage-child .boxbtn .btnname {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*****************/
+/** search page **/
+/*****************/
+.searchpage, .adminpage {
+  text-align: center;
+  margin: 10% 20%;
+}
+
+.searchpage .searchbar, 
+.adminpage .searchbar{
+  padding-top: 16px;
+}
+
+/** shorten the width of the search bar **/
+.searchpage .searchbar,
+.searchpage .uploadbar,
+.adminpage .searchbar {
+  width: 100%;
+}
+
+/** the text input area will take up 90% of the search bar **/
+.searchpage form.searchform #q,
+.adminpage form.searchform #url {
+  width: 90%;
+  outline: none;
+}
+
+/** the search button will take up 10% of the search bar **/
+.searchpage form.searchform button,
+.adminpage form.searchform button {
+  width: 10%;
+  outline: none;
+}
+
+/** buttons at bottom of search page for different search options **/
+.searchrelocate {
+  margin: 10% 0;
+  text-align: center;
+}
+
+.searchrelocate h2 {
+  font-weight: lighter;
+}
+
+.searchrelocate .boxbtn .btnname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.searchrelocate .boxbtn{
+  font-size: 15px;
+  background-color: var(--color-offwhite);
+  color: var(--color-blue);
+  margin: 20px 10px;
+  width: 130px;
+  height: 130px;
+}
+
+/***************************/
+/** search from file page **/
+/***************************/
+
+/** hide default file input button **/
+.uploadbar input[type=file]{
+  display: none;
+}
+
+/** replace default file upload button in From File**/
+.uploadbar {
+  width: 100%;
+  color: black;
+}
+
+.uploadbar i {
+  cursor: pointer;
+}
+
+.uploadbar .filenameinput {
+  cursor: default;
+}
+
+#fileErrMsg {
+  text-align: left;
+  font-size: 16px;
+  color: red;
+}
+
+.searchbtndisabled i{
+  opacity: 0.5;
+}
+
+input[data-readonly] {
+  pointer-events: none;
+}
+
+/*************************/
+/** search results page **/
+/*************************/
+
+/** reduce margins, clearing right side of page **/
+.searchresultspage {
+  margin: 0 45% 0 5%;
+}
+
+/** make search bar take up entire width of horizontal margin **/
+.searchresultspage .searchbar {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/** first line under search bar **/
+.hidesearchbarunder {
+  display: none;
+}
+
+.showsearchbarunder {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+
+.showsearchbarunder .checkbox {
+  float: left;
+}
+
+.resultcount {
+  font-size: 15px;
+  padding-top: 10px;
+  color: var(--color-gray);
+}
+
+.showsearchbarunder .hidedownload {
+  visibility: hidden;
+  height: 27px;
+}
+
+.showsearchbarunder .showdownload {
+  visibility: visible;
+}
+
+.showdownload #numselected {
+  float: left;
+  padding-top: 6px;
+  color: var(--color-darkgray);
+  vertical-align: text-bottom;
+}
+
+.showdownload .save {
+  float: right;
+}
+
+.showdownload #drp {
+  border-radius: 5px;
+  padding: 3px 0;
+  vertical-align: top;
+}
+
+.showdownload #savebtn {
+  font-size: 22px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: var(--color-darkgray);
+  cursor: pointer;
+  outline: none;
+}
+
+.showdownload #savebtn:hover {
+  background-color: var(--color-lightgray);
+}
+
+/** spacing between results **/
+.result {
+  padding: 10px 0;
+  height: 100px;
+}
+
+.result .checkbox {
+  float: left;
+}
+
+.resultdata {
+  padding-left: 40px;
+}
+
+.resultdata .title {
+  font-size: 17px;
+  padding-bottom: 3px;
+  color: var(--color-blue);
+}
+
+.resultdata .url {
+  font-size: 15px;
+  padding-bottom: 3px;
+  color: var(--color-urlblue);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.resultdata .description {
+  font-size: 15px;
+  color: var(--color-darkgray);
+}
+
+.pagecount {
+  text-align: center;
+  color: var(--color-darkgray);
+  font-size: 14px;
+}
+
+/*******************/
+/** browser pages **/
+/*******************/
+.bom-page {
+  font-size: 18px;
+}
+
+.bom-page h1 {
+  padding: 10px 5px;
+  font-size: 28px;
+}
+
+.bom-page #backbtn{
+  padding: 4px;
+  font-size: 20px;
+  border: none;
+  float: left;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.bom-page section {
+  padding: 10px 15px;
+}
+
+.bom-page section h2 {
+  font-size: 20px;
+}
+
+.bom-page section p {
+  word-wrap: break-word;
+}
+
+/**************************/
+/** about developer page **/
+/**************************/
+.developerpage h1{
+  padding-top: 20px;
+}
+
+.developerpage .developer {
+  margin: 0 10%;
+}
+
+.developer img {
+  padding-top: 30px;
+  width: 50%;
+  height: auto;
+  float: left;
+}
+
+.developerpage .developerdescript {
+  padding-top: 30px;
+  width: 50%;
+  float: left;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.developerpage span {
+  font-weight: bold;
+}
+
+/*************************/
+/** for contact us page **/
+/*************************/
+.contactuspage {
+  margin: 2% 10%;
+}
+
+/** for Contact Us title **/
+.contactus {
+  padding: 20px;
+  font-size: 18px;
+}
+
+/** adjust text boxes **/
+.contactus input[type=text], 
+textarea {
+  margin: 6px 0 10px 0;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  font-size: 15px;
+  outline: none;
+}
+
+/** give textarea minimum height **/
+.contactus textarea {
+  height: 200px;
+}
+
+/** submit button **/
+.contactus input[type=submit] {
+  background-color: var(--color-gray);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/** change color of submit button on hover **/
+.contactus input[type=submit]:hover {
+  background-color: var(--color-blue);
+}
+
+/*****************************************/
+/** search bar with one button (search) **/
+/*****************************************/
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/** text input bar **/
+form.searchform input[type=text], 
+form.searchform input[type=search]{
+  padding: 6px;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-right: none;
+  float: left;
+  background: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/** search button **/
+form.searchform button, 
+.uploadbar .browsebtn {
+  padding: 7px;
+  font-size: 15px;
+  border: 1px solid grey;
+  float: left;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+/** search button in initial search page, except From File **/
+.searchbar #searchbtn, 
+.uploadbar #canceluploadbtn {
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.searchbar::after, 
+.uploadbar::after,
+.showsearchbarunder::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*********************************/
+/** search bar with two buttons **/
+/*********************************/
+
+/** text input of searchbar in results page and From File reduced to accommodate 2 buttons **/ 
+.searchresultspage form.searchform input[type=search], 
+form.searchform .uploadbar .filenameinput  {
+  width: 81%;
+  border-left: none;
+  border-radius: 0px;
+  outline: none;
+  text-align: left;
+}
+
+/** search button width reduced to accomodate two buttons **/
+.searchresultspage #searchbtn, 
+.uploadbar #canceluploadbtn {
+  width: 10%;
+  outline: none;
+}
+
+/** extra buttons (back button, upload button) added **/
+.searchresultspage #backbtn, 
+.uploadbar .browsebtn {
+  padding: 7px;
+  font-size: 15px;
+  border: 1px solid grey;
+  float: left;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  width: 9%;
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+}
+
+/*****************/
+/** box buttons **/
+/*****************/
+form.boxbtnform {
+  display: inline-block;
+}
+
+form.boxbtnform .boxbtn {
+  vertical-align: top;
+  border: none;
+  padding: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+  border-radius: 10px;
+  outline: none;
+}
+
+form.boxbtnform .boxbtn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*******************/
+/*indexing launcher*/
+/*******************/
+.enterurlbtn {
+  font-weight: bold;
+}
+
+/****************/
+/** responsive **/
+/****************/
+@media screen and (max-width: 600px){
+  /** defaults **/
+  body{
+    margin-top: 15%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  /** hide dropdown menu items **/
+  .topnav a:not(:first-child), 
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  /** responsive topnav **/
+  .topnav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .topnav a.hamburger {
+    float: right;
+    display: block;
+    font-size: 20px;
+    color: var(--color-blue);
+  }
+
+  .topnav.responsive {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .topnav.responsive a.hamburger {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    color:#28303d;
+    font-size: 20px;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  /** responsive dropdown **/
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+    border-radius: 0;
+  }
+  
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  /** responsive homepage **/
+  .homepage .boxbtn .btnname {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .homepage .boxbtn {
+    font-size: 14px;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  /** responsive search bar **/
+  .searchpage .searchbar, 
+  .searchpage .uploadbar,
+  .adminpage .searchbar {
+    width: 100%;
+  }
+
+  /** responsive search page **/
+  .searchpage,
+  .adminpage {
+    margin: 30% 5%;
+  }
+
+  /** responsive search results page **/
+  .searchresultspage {
+    margin: 0 5%;
+  }
+
+  /** responsive search relocation box buttons **/
+  .searchrelocate {
+    margin: 20% 0;
+  }
+
+  .searchrelocate h2 {
+    font-size: 18px;
+    font-weight: lighter;
+  }
+
+  .searchrelocate .boxbtn .btnname {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .searchrelocate .boxbtn{
+    font-size: 0px;
+    margin: 5px 2px;
+    width: 80px;
+    height: 40px;
+  }
+
+   /** responsive box buttons **/
+  form.boxbtnform .boxbtn {
+    opacity: 1;
+  }
+
+  /** responsive contact us page **/
+  .contactuspage {
+    margin: 0 2%;
+  }
+
+  /** responsible about developer page **/
+  .developer img, 
+  .developerpage .developerdescript {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .showdownload {
+    font-size: 12px;
+  }
+
+  .showdownload #numselected {
+    padding-top: 10px;
+  }
+}

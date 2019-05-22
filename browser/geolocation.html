@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html>
+  <head> 
+    <title>Geolocation | SARA</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get information about your geolocation.">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/layout.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link rel="SHORTCUT ICON" href="../SARA-icon.png">
+  </head> 
+  <nav class="topnav" id="topNav">
+    <a class="logo" href="../home.html"><img src="../SARA-icon.png" alt="SARA" style="width:50px; height: 50px"></a>
+    <div class="dropdown">
+      <button class="dropbtn">Search
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../search-by/fixed-list.html">Fixed List</a>
+        <a href="../search-by/from-file.html">From File</a>
+        <a href="../search-by/google-api.html">Google API</a>
+        <a href="../search-by/our-search-engine.html">Our Search Engine</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Course
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanSpring2019" target="_blank">Zybook</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Browser
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="navigator.html">Navigator</a>
+        <a href="window.html">Window</a>
+        <a href="screen.html">Screen</a>
+        <a href="location.html">Location</a>
+        <a href="geolocation.html" class="active">Geolocation</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">About
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../about/developer.html">Developer</a>
+        <a href="../about/contact-us.php">Contact Us</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Admin
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../admin/indexing-launcher.php">Indexing Launcher</a>
+        <a href="../admin/search-hist.php">Search History & Stats</a>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="hamburger" onclick="navBarFunc()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <body>
+    <div class="bom-page">
+      <h1><button type="submit" id="backbtn" onclick="goBack()"><i class="fas fa-chevron-left"></i>
+        </button>Browser Geolocation Information</h1>
+      <section>
+        <h2>Latitude</h2>
+        <p id="bom-latitude"></p>
+      </section>
+      <section>
+        <h2>Longitude</h2>
+        <p id="bom-longitude"></p>
+      </section>
+    </div>
+    <script src="../scripts/functions.js"></script>
+    <script src="../scripts/bom-geolocation.js"></script>
+  </body>
+</html>
